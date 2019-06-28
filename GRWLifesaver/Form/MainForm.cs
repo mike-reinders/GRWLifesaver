@@ -1,4 +1,4 @@
-﻿namespace GRWLifesaver
+﻿namespace GRWLifesaver.Form
 {
 
     public class MainForm : System.Windows.Forms.Form
@@ -78,7 +78,7 @@
         }
 
 
-        public AccountProfile AccountProfile
+        public GRWLifesaver.AccountProfile AccountProfile
         {
             get;
             set;
@@ -157,10 +157,10 @@
 
         private void MainForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
-            if (SaveGame.BackupService.IsEnabled) {
-                SaveGame.BackupService.Disable(200);
+            if (GRWLifesaver.SaveGame.BackupService.IsEnabled) {
+                GRWLifesaver.SaveGame.BackupService.Disable(200);
 
-                if (SaveGame.BackupService.IsEnabled) {
+                if (GRWLifesaver.SaveGame.BackupService.IsEnabled) {
                     e.Cancel = true;
                 }
             }
@@ -273,7 +273,7 @@
         private void SetDisplaySaveGames() => this.SetDisplaySaveGames(null);
 
 
-        private void SetDisplaySaveGames(AccountProfile accountProfile)
+        private void SetDisplaySaveGames(GRWLifesaver.AccountProfile accountProfile)
         {
             this.SuspendLayout();
 
@@ -1125,7 +1125,7 @@
         }
 
         
-        private void showBackupForm(SaveGame saveGame)
+        private void showBackupForm(GRWLifesaver.SaveGame saveGame)
         {
             if (!(saveGame is null)) {
                 this.BF_BackupForm.SaveGame = saveGame;
@@ -1296,7 +1296,7 @@
         }
 
 
-        private void _updateSavegameChart(System.Windows.Forms.ListViewItem listViewItem, SaveGame saveGame)
+        private void _updateSavegameChart(System.Windows.Forms.ListViewItem listViewItem, GRWLifesaver.SaveGame saveGame)
         {
             System.String itemText;
 

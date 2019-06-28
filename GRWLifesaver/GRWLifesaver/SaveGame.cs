@@ -1,4 +1,4 @@
-﻿namespace GRWLifesaver
+﻿namespace GRWLifesaver.GRWLifesaver
 {
 
     public class SaveGame

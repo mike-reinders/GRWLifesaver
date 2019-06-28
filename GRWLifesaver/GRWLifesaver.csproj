@@ -51,21 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountProfile.cs" />
-    <Compile Include="AccountProfileCollection.cs" />
-    <Compile Include="BackupForm.cs">
+    <Compile Include="GRWLifesaver\AccountProfile.cs" />
+    <Compile Include="GRWLifesaver\AccountProfileCollection.cs" />
+    <Compile Include="Form\BackupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BackupService.cs" />
-    <Compile Include="GRWLifesaver.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="GRWLifesaver\BackupService.cs" />
+    <Compile Include="GRWLifesaver\GRWLifesaver.cs" />
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistryAPI.cs" />
-    <Compile Include="RegistryPointer.cs" />
-    <Compile Include="SaveGame.cs" />
+    <Compile Include="Misc\RegistryAPI.cs" />
+    <Compile Include="Misc\RegistryPointer.cs" />
+    <Compile Include="GRWLifesaver\SaveGame.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

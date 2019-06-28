@@ -1,4 +1,4 @@
-﻿namespace GRWLifesaver
+﻿namespace GRWLifesaver.GRWLifesaver
 {
 
     public class GRWLifesaver
@@ -6,10 +6,10 @@
 
         public const System.String UplayDefaultInstallPath = "C:\\Program Files (x86)\\Ubisoft\\Ubisoft Game Launcher\\";
 
-        private RegistryPointer RP_UplayInstallDirUbisoft = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Launcher", "InstallDir");
-        private RegistryPointer RP_UplayInstallDirWindows = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Uplay", "InstallLocation");
-        private RegistryPointer RP_BackupFolder = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Lifesaver", "BackupFolder");
-        private RegistryPointer RP_UserBackupFolder = new RegistryPointer(Microsoft.Win32.RegistryHive.CurrentUser, @"Software\Ubisoft\Lifesaver", "BackupFolder");
+        private Misc.RegistryPointer RP_UplayInstallDirUbisoft = new Misc.RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Launcher", "InstallDir");
+        private Misc.RegistryPointer RP_UplayInstallDirWindows = new Misc.RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Uplay", "InstallLocation");
+        private Misc.RegistryPointer RP_BackupFolder = new Misc.RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Lifesaver", "BackupFolder");
+        private Misc.RegistryPointer RP_UserBackupFolder = new Misc.RegistryPointer(Microsoft.Win32.RegistryHive.CurrentUser, @"Software\Ubisoft\Lifesaver", "BackupFolder");
 
         private System.String backupFolder;
         private System.String uplayFolder;

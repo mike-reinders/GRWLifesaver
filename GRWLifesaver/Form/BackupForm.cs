@@ -1,4 +1,4 @@
-﻿namespace GRWLifesaver
+﻿namespace GRWLifesaver.Form
 {
 
     public class BackupForm : System.Windows.Forms.Form
@@ -267,7 +267,7 @@
         }
 
 
-        public SaveGame SaveGame
+        public GRWLifesaver.SaveGame SaveGame
         {
             get;
             set;

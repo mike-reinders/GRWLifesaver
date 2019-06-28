@@ -7,15 +7,15 @@
 
         public void Run()
         {
-            this.GRWLifesaver = new GRWLifesaver(this);
+            this.GRWLifesaver = new GRWLifesaver.GRWLifesaver(this);
 
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(new MainForm(this));
+            System.Windows.Forms.Application.Run(new Form.MainForm(this));
         }
 
 
-        public GRWLifesaver GRWLifesaver
+        public GRWLifesaver.GRWLifesaver GRWLifesaver
         {
             get;
             private set;
