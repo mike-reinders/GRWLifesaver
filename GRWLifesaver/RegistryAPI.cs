@@ -50,13 +50,14 @@
                     return this.cache[registryPointer];
                 }
 
-                Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.RegistryKey.OpenBaseKey(registryPointer.RegistryHive, Microsoft.Win32.RegistryView.Registry32).OpenSubKey(registryPointer.SubKey);
-                if (!(regKey is null)) {
-                    System.Object obj = regKey.GetValue(registryPointer.Name);
+                using (Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.RegistryKey.OpenBaseKey(registryPointer.RegistryHive, Microsoft.Win32.RegistryView.Registry32).OpenSubKey(registryPointer.SubKey)) {
+                    if (!(regKey is null)) {
+                        System.Object obj = regKey.GetValue(registryPointer.Name);
 
-                    if (type is null || obj.GetType() == type) {
-                        this.cache.Add(registryPointer, obj);
-                        return obj;
+                        if (type is null || obj.GetType() == type) {
+                            this.cache.Add(registryPointer, obj);
+                            return obj;
+                        }
                     }
                 }
 
@@ -75,24 +76,24 @@
         {
             if (registryPointer is null) throw new System.ArgumentNullException("registryPointer");
 
-            Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.RegistryKey.OpenBaseKey(registryPointer.RegistryHive, Microsoft.Win32.RegistryView.Registry32).CreateSubKey(registryPointer.SubKey);
-
-            lock (this.cache) {
-                if (value is null) {
-                    regKey.DeleteValue(registryPointer.SubKey);
-                } else {
-                    Microsoft.Win32.RegistryValueKind registryValueKind;
-
-                    if (value.GetType() == typeof(System.String)) {
-                        registryValueKind = Microsoft.Win32.RegistryValueKind.String;
+            using (Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.RegistryKey.OpenBaseKey(registryPointer.RegistryHive, Microsoft.Win32.RegistryView.Registry32).CreateSubKey(registryPointer.SubKey)) {
+                lock (this.cache) {
+                    if (value is null) {
+                        regKey.DeleteValue(registryPointer.SubKey);
                     } else {
-                        throw new System.NotSupportedException("unsupported value type");
-                    }
-                
-                    regKey.SetValue(registryPointer.Name, value, registryValueKind);
-                }
+                        Microsoft.Win32.RegistryValueKind registryValueKind;
 
-                this.cache.Remove(registryPointer);
+                        if (value.GetType() == typeof(System.String)) {
+                            registryValueKind = Microsoft.Win32.RegistryValueKind.String;
+                        } else {
+                            throw new System.NotSupportedException("unsupported value type");
+                        }
+
+                        regKey.SetValue(registryPointer.Name, value, registryValueKind);
+                    }
+
+                    this.cache.Remove(registryPointer);
+                }
             }
         }
 
