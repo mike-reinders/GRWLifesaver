@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GRWLifesaver\AccountProfile.cs" />
     <Compile Include="GRWLifesaver\AccountProfileCollection.cs" />
     <Compile Include="Form\BackupForm.cs">
