@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GRWLifesaver
+﻿namespace GRWLifesaver
 {
 
     public class BackupForm : System.Windows.Forms.Form
@@ -97,7 +95,7 @@ namespace GRWLifesaver
         }
 
 
-        private void BN_Delete_Click(object sender, EventArgs e)
+        private void BN_Delete_Click(object sender, System.EventArgs e)
         {
             if (this.LV_BackupsList.SelectedIndices.Count > 0) {
                 System.String[] backups = new System.String[this.LV_BackupsList.SelectedIndices.Count];
