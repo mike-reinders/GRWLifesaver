@@ -48,6 +48,8 @@
         private System.Windows.Forms.ToolStripItem MI_SteamPCBackups_Backups;
         private System.Windows.Forms.ToolStripItem MI_SteamPCBackups_EnableBackup;
 
+        private System.Windows.Forms.NotifyIcon NI_MainFormNotifyIcon;
+
         private BackupForm BF_BackupForm;
 
         private System.Windows.Forms.Timer Tmr_Updater;
@@ -98,8 +100,58 @@
 
             // this events
             this.FormClosing += this.MainForm_FormClosing;
+            this.FormClosed += this.MainForm_FormClosed;
+            this.Resize += this.MainForm_Resize;
+
+            // NI_MainFormNotifyIcon
+            this.NI_MainFormNotifyIcon = new System.Windows.Forms.NotifyIcon();
+            this.NI_MainFormNotifyIcon.Icon = Properties.Resources.GRW_101;
+            this.NI_MainFormNotifyIcon.Visible = true;
+            this.NI_MainFormNotifyIcon.Text = "Ghost Recon Wildlands: Lifesaver";
+
+            this.NI_MainFormNotifyIcon.DoubleClick += this.NI_MainFormNotifyIcon_DoubleClick;
 
             this.ResumeLayout(true);
+        }
+
+
+        private void HideToTray()
+        {
+            this.Hide();
+        }
+
+
+        private void ShowFromTray()
+        {
+            this.Show();
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Minimized) {
+                this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+            this.Activate();
+            this.BringToFront();
+        }
+
+
+        private void NI_MainFormNotifyIcon_DoubleClick(object sender, System.EventArgs e)
+        {
+            this.ShowFromTray();
+        }
+
+
+        private void MainForm_Resize(object sender, System.EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Maximized) {
+                this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            } else if (this.WindowState == System.Windows.Forms.FormWindowState.Minimized) {
+                this.HideToTray();
+            }
+        }
+
+
+        private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            this.NI_MainFormNotifyIcon.Dispose();
+            this.NI_MainFormNotifyIcon = null;
         }
 
 
