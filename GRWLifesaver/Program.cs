@@ -11,15 +11,27 @@
 
         public void Run()
         {
-            this.GRWLifesaver = new GRWLifesaver.GRWLifesaver(this);
-
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
             System.Windows.Forms.Application.SetUnhandledExceptionMode(System.Windows.Forms.UnhandledExceptionMode.CatchException);
-            System.Windows.Forms.Application.ThreadException += this.Application_ThreadException;
+            
+            System.Threading.Mutex mutex = new System.Threading.Mutex(false, "GRWLifesaverSingleInstanceMutex");
+            try {
+                if (mutex.WaitOne(0, false)) {
+                    System.Windows.Forms.Application.ThreadException += this.Application_ThreadException;
 
-            this.MainForm = new Form.MainForm(this);
-            System.Windows.Forms.Application.Run(this.MainForm);
+                    this.GRWLifesaver = new GRWLifesaver.GRWLifesaver(this);
+                    this.MainForm = new Form.MainForm(this);
+                    System.Windows.Forms.Application.Run(this.MainForm);
+                } else {
+                    Form.ErrorForm.Show("GRWLifesaver is already running!", true);
+                }
+            } finally {
+                if (mutex != null) {
+                    mutex.Close();
+                    mutex = null;
+                }
+            }
         }
 
 
