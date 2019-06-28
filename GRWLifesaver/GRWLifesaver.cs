@@ -9,7 +9,8 @@
         private RegistryPointer RP_UplayInstallDirUbisoft = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Launcher", "InstallDir");
         private RegistryPointer RP_UplayInstallDirWindows = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Uplay", "InstallLocation");
         private RegistryPointer RP_BackupFolder = new RegistryPointer(Microsoft.Win32.RegistryHive.LocalMachine, @"SOFTWARE\Wow6432Node\Ubisoft\Lifesaver", "BackupFolder");
-        
+        private RegistryPointer RP_UserBackupFolder = new RegistryPointer(Microsoft.Win32.RegistryHive.CurrentUser, @"Software\Ubisoft\Lifesaver", "BackupFolder");
+
         private System.String backupFolder;
         private System.String uplayFolder;
 
@@ -38,7 +39,11 @@
             get
             {
                 if (this.backupFolder is null) {
-                    this.backupFolder = this.RP_BackupFolder.GetString();
+                    try {
+                        this.backupFolder = this.RP_BackupFolder.GetString();
+                    } catch (System.Exception ex) when (ex is System.Security.SecurityException || ex is System.UnauthorizedAccessException) {
+                        this.backupFolder = this.RP_UserBackupFolder.GetString();
+                    }
 
                     if (!(this.backupFolder is null) && !System.IO.Directory.Exists(this.backupFolder)) {
                         this.BackupFolder = null;
@@ -49,7 +54,11 @@
             }
             set
             {
-                this.RP_BackupFolder.SetValue(value);
+                try {
+                    this.RP_BackupFolder.SetValue(value);
+                } catch (System.Exception ex) when (ex is System.Security.SecurityException || ex is System.UnauthorizedAccessException) {
+                    this.RP_UserBackupFolder.SetValue(value);
+                }
                 this.backupFolder = null;
                 foreach (AccountProfile accountProfile in this.AccountProfiles) {
                     accountProfile.ClearCache();
