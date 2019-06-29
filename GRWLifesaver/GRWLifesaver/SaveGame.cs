@@ -24,7 +24,7 @@
         {
             if (accountProfile is null) throw new System.ArgumentNullException("accountProfile");
             if (gameID < 0) throw new System.ArgumentException("GameID must be positive value");
-            if (id < 1 || id > 8) throw new System.ArgumentException("id must be in range between 1 and 8");
+            if (id < 1 || id > 15) throw new System.ArgumentException("id must be in range between 1 and 15");
             
             this.AccountProfile = accountProfile;
             this.GameID = gameID;
