@@ -4,7 +4,7 @@
     public class SaveGame
     {
 
-        public static System.Text.RegularExpressions.Regex REGEX_BACKUPSAVE = new System.Text.RegularExpressions.Regex(@"^([1-8])_([0-9]{4}\-[0-9]{2}\-[0-9]{2}_[0-9]{2}\-[0-9]{2}\-[0-9]{2})\.save$");
+        public static System.Text.RegularExpressions.Regex REGEX_BACKUPSAVE = new System.Text.RegularExpressions.Regex(@"^([0-9]|[1][0-5])_([0-9]{4}\-[0-9]{2}\-[0-9]{2}_[0-9]{2}\-[0-9]{2}\-[0-9]{2})\.save$");
         public static System.Text.RegularExpressions.Regex REGEX_SAVEGAME_INTERNALIDENTIFIER = new System.Text.RegularExpressions.Regex(@"^([0-9A-Z]+)\[([0-9]+)\]\-tm_([0-9]{4}_[0-9]{2}_[0-9]{2}_[0-9]{2}_[0-9]{2}_[0-9]{2})$");
         
         private System.Collections.Generic.List<System.String> backups = new System.Collections.Generic.List<string>();
