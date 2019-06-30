@@ -11,6 +11,8 @@
         private System.Windows.Forms.Button BN_Cancel;
         private System.Windows.Forms.Button BN_Restore;
 
+        private Form.DeletionPromptForm DF_DeletionPromptForm;
+
         public BackupForm()
         {
             this.InitializeComponent();
@@ -86,6 +88,8 @@
 
             this.BN_Restore.Click += this.BN_Restore_Click;
 
+            this.DF_DeletionPromptForm = new DeletionPromptForm();
+
             // this events
             this.FormClosed += this.BackupForm_FormClosed;
             this.Load += this.BackupForm_Load;
@@ -104,11 +108,9 @@
                     backups[i] = this.SaveGame.GetBackupFromDate(this._getDate(this.LV_BackupsList.SelectedItems[i].Text));
                 }
 
-                foreach (System.String backup in backups) {
-                    this.SaveGame.DeleteBackup(backup);
+                if (this.DF_DeletionPromptForm.ShowDeleteDialog(this.SaveGame, backups) == System.Windows.Forms.DialogResult.Yes) {
+                    this.RefreshBackupsList();
                 }
-
-                this.RefreshBackupsList();
             }
         }
 
