@@ -5,6 +5,7 @@
     {
 
         private System.Collections.Generic.HashSet<SaveGame> saveGames = new System.Collections.Generic.HashSet<SaveGame>();
+        private System.Boolean saveGamesHasChanged = true;
         private System.Threading.Thread thread;
         private System.Boolean closeThread;
 
@@ -33,6 +34,7 @@
             lock (this.saveGames) {
                 if (!this.saveGames.Contains(saveGame)) {
                     saveGames.Add(saveGame);
+                    this.saveGamesHasChanged = true;
 
                     if (thread is null || !thread.IsAlive) {
                         thread = new System.Threading.Thread(this.mainThread);
@@ -50,6 +52,7 @@
             lock (this.saveGames) {
                 if (this.saveGames.Contains(saveGame)) {
                     saveGames.Remove(saveGame);
+                    this.saveGamesHasChanged = true;
                 }
             }
         }
@@ -59,6 +62,14 @@
         {
             lock (this.saveGames) {
                 return !(saveGame is null) && this.saveGames.Contains(saveGame);
+            }
+        }
+
+
+        private System.Int32 GetCount()
+        {
+            lock (this.saveGames) {
+                return this.saveGames.Count;
             }
         }
 
@@ -83,15 +94,22 @@
         {
             // init values
             this.closeThread = false;
+            SaveGame[] saveGames = new SaveGame[0];
             System.DateTime lastProcedualBackup = System.DateTime.MinValue;
             System.Boolean didBackupOnce = false;
-            
-            while (this.saveGames.Count > 0 && !this.closeThread) {
-                if ((System.DateTime.Now - lastProcedualBackup).TotalSeconds > 120) {
-                    lock (this.saveGames) {
-                        SaveGame[] saveGames = new SaveGame[this.saveGames.Count];
+
+            do {
+                // Cache SaveGames
+                lock (this.saveGames) {
+                    if (this.saveGamesHasChanged) {
+                        saveGames = new SaveGame[this.saveGames.Count];
                         this.saveGames.CopyTo(saveGames);
+                        this.saveGamesHasChanged = false;
                     }
+                }
+
+                // Ensure Procedual Backups
+                if ((System.DateTime.Now - lastProcedualBackup).TotalSeconds > 120) {
                     foreach (SaveGame saveGame in saveGames) {
                         if (saveGame.LastChanged > saveGame.LastBackup) {
                             saveGame.EnsureBackup();
@@ -111,7 +129,7 @@
 
                 // sleep
                 System.Threading.Thread.Sleep(100);
-            }
+            } while (saveGames.Length > 0 && !this.closeThread);
         }
 
     }
