@@ -255,14 +255,6 @@
         }
 
 
-        public void EnsureProceduralBackup()
-        {
-            if ((this.LastChanged - this.LastBackup).TotalSeconds >= 120) {
-                this.EnsureBackup();
-            }
-        }
-
-
         public System.DateTime LastChanged
         {
             get

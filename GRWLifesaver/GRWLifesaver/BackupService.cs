@@ -6,6 +6,8 @@
 
         private System.Collections.Generic.HashSet<SaveGame> saveGames = new System.Collections.Generic.HashSet<SaveGame>();
         private System.Threading.Thread thread;
+        private System.Boolean closeThread;
+        private System.DateTime lastProcedualBackup;
 
 
         public BackupService()
@@ -68,6 +70,7 @@
         public void Disable(System.Int32 millisecondsTimeout)
         {
             lock (this.saveGames) {
+                this.closeThread = true;
                 this.saveGames.Clear();
 
                 if (millisecondsTimeout >= 0) {
@@ -79,23 +82,29 @@
 
         private void mainThread()
         {
-            while (this.saveGames.Count > 0) {
-                lock (this.saveGames) {
-                    SaveGame[] saveGames = new SaveGame[this.saveGames.Count];
-                    this.saveGames.CopyTo(saveGames);
-                }
-                foreach (SaveGame saveGame in saveGames) {
-                    saveGame.EnsureProceduralBackup();
+            // init values
+            this.closeThread = false;
+            this.lastProcedualBackup = System.DateTime.Now;
 
-                    if (this.saveGames.Count <= 0) {
-                        break;
+            while (this.saveGames.Count > 0 && !this.closeThread) {
+                if ((System.DateTime.Now - this.lastProcedualBackup).TotalSeconds > 120) {
+                    lock (this.saveGames) {
+                        SaveGame[] saveGames = new SaveGame[this.saveGames.Count];
+                        this.saveGames.CopyTo(saveGames);
+                    }
+                    foreach (SaveGame saveGame in saveGames) {
+                        if (saveGame.LastChanged > saveGame.LastBackup) {
+                            saveGame.EnsureBackup();
+                        }
+
+                        if (this.closeThread) {
+                            break;
+                        }
                     }
                 }
 
                 // sleep
-                for (System.Int32 i = 0; i < 100 && this.saveGames.Count > 0; i++) {
-                    System.Threading.Thread.Sleep(100);
-                }
+                System.Threading.Thread.Sleep(100);
             }
         }
 
