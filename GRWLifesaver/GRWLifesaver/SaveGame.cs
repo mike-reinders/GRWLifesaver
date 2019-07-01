@@ -88,6 +88,7 @@
         {
             get
             {
+                this.FileInfo.Refresh();
                 return this.FileInfo.Exists;
             }
         }

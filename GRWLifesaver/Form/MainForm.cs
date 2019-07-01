@@ -1834,7 +1834,7 @@
 
             if (saveGame.Exists) {
                 if (saveGame.LastChanged == System.DateTime.MinValue) {
-                    itemText = "";
+                    itemText = "n/a";
                     saveGame.ClearCache();
                 } else {
                     itemText = saveGame.LastChanged.ToString("dd.MM.yyyy  HH:mm:ss") + "  /" + MainForm._dateToShort(saveGame.LastChanged);
@@ -1848,7 +1848,7 @@
             
             if (saveGame.BackupExists) {
                 if (saveGame.LastBackup == System.DateTime.MinValue) {
-                    itemText = "";
+                    itemText = "n/a";
                     saveGame.ClearCache();
                 } else {
                     itemText = saveGame.LastBackup.ToString("dd.MM.yyyy  HH:mm:ss") + "  /" + MainForm._dateToShort(saveGame.LastBackup);
