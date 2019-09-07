@@ -35,6 +35,11 @@
         private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot13;
         private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot14;
         private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot15;
+        private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot16;
+        private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot17;
+        private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot18;
+        private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot19;
+        private System.Windows.Forms.ListViewItem LVI_UplayPCBackups_Slot20;
 
         private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot1;
         private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot2;
@@ -51,6 +56,11 @@
         private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot13;
         private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot14;
         private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot15;
+        private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot16;
+        private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot17;
+        private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot18;
+        private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot19;
+        private System.Windows.Forms.ListViewItem LVI_SteamPCBackups_Slot20;
 
         private System.Windows.Forms.ContextMenuStrip CM_UplayPCBackups;
         private System.Windows.Forms.ToolStripItem MI_UplayPCBackups_CreateBackup;
@@ -107,7 +117,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Size = new System.Drawing.Size(590, 445);
+            this.Size = new System.Drawing.Size(590, 530);
 
             this.Icon = Properties.Resources.GRW_101;
             this.Text = Program.Name;
@@ -432,6 +442,36 @@
                     this.LVI_UplayPCBackups_Slot15.Text = "15";
                 }
 
+                // LVI_UplayPCBackups_Slot16
+                if (this.LVI_UplayPCBackups_Slot16 is null) {
+                    this.LVI_UplayPCBackups_Slot16 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_UplayPCBackups_Slot16.Text = "16";
+                }
+
+                // LVI_UplayPCBackups_Slot17
+                if (this.LVI_UplayPCBackups_Slot17 is null) {
+                    this.LVI_UplayPCBackups_Slot17 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_UplayPCBackups_Slot17.Text = "17";
+                }
+
+                // LVI_UplayPCBackups_Slot18
+                if (this.LVI_UplayPCBackups_Slot18 is null) {
+                    this.LVI_UplayPCBackups_Slot18 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_UplayPCBackups_Slot18.Text = "18";
+                }
+
+                // LVI_UplayPCBackups_Slot19
+                if (this.LVI_UplayPCBackups_Slot19 is null) {
+                    this.LVI_UplayPCBackups_Slot19 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_UplayPCBackups_Slot19.Text = "19";
+                }
+
+                // LVI_UplayPCBackups_Slot20
+                if (this.LVI_UplayPCBackups_Slot20 is null) {
+                    this.LVI_UplayPCBackups_Slot20 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_UplayPCBackups_Slot20.Text = "20";
+                }
+
                 // LV_UplayPCBackups
                 if (this.LV_UplayPCBackups is null) {
                     this.LV_UplayPCBackups = new System.Windows.Forms.ListView();
@@ -496,6 +536,21 @@
 
                     this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot15);
                     this.LVI_UplayPCBackups_Slot15.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot16);
+                    this.LVI_UplayPCBackups_Slot16.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot17);
+                    this.LVI_UplayPCBackups_Slot17.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot18);
+                    this.LVI_UplayPCBackups_Slot18.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot19);
+                    this.LVI_UplayPCBackups_Slot19.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_UplayPCBackups.Items.Add(this.LVI_UplayPCBackups_Slot20);
+                    this.LVI_UplayPCBackups_Slot20.SubItems.AddRange(new System.String[] { "", "", "" });
 
 
                     this.LV_UplayPCBackups.MouseUp += this.LV_UplayPCBackups_MouseUp;
@@ -606,6 +661,36 @@
                     this.LVI_SteamPCBackups_Slot15.Text = "15";
                 }
 
+                // LVI_SteamPCBackups_Slot16
+                if (this.LVI_SteamPCBackups_Slot16 is null) {
+                    this.LVI_SteamPCBackups_Slot16 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_SteamPCBackups_Slot16.Text = "16";
+                }
+
+                // LVI_SteamPCBackups_Slot17
+                if (this.LVI_SteamPCBackups_Slot17 is null) {
+                    this.LVI_SteamPCBackups_Slot17 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_SteamPCBackups_Slot17.Text = "17";
+                }
+
+                // LVI_SteamPCBackups_Slot18
+                if (this.LVI_SteamPCBackups_Slot18 is null) {
+                    this.LVI_SteamPCBackups_Slot18 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_SteamPCBackups_Slot18.Text = "18";
+                }
+
+                // LVI_SteamPCBackups_Slot19
+                if (this.LVI_SteamPCBackups_Slot19 is null) {
+                    this.LVI_SteamPCBackups_Slot19 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_SteamPCBackups_Slot19.Text = "19";
+                }
+
+                // LVI_SteamPCBackups_Slot20
+                if (this.LVI_SteamPCBackups_Slot20 is null) {
+                    this.LVI_SteamPCBackups_Slot20 = new System.Windows.Forms.ListViewItem();
+                    this.LVI_SteamPCBackups_Slot20.Text = "20";
+                }
+
                 // LV_SteamPCBackups
                 if (this.LV_SteamPCBackups is null) {
                     this.LV_SteamPCBackups = new System.Windows.Forms.ListView();
@@ -671,6 +756,20 @@
                     this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot15);
                     this.LVI_SteamPCBackups_Slot15.SubItems.AddRange(new System.String[] { "", "", "" });
 
+                    this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot16);
+                    this.LVI_SteamPCBackups_Slot16.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot17);
+                    this.LVI_SteamPCBackups_Slot17.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot18);
+                    this.LVI_SteamPCBackups_Slot18.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot19);
+                    this.LVI_SteamPCBackups_Slot19.SubItems.AddRange(new System.String[] { "", "", "" });
+
+                    this.LV_SteamPCBackups.Items.Add(this.LVI_SteamPCBackups_Slot20);
+                    this.LVI_SteamPCBackups_Slot20.SubItems.AddRange(new System.String[] { "", "", "" });
 
                     this.LV_SteamPCBackups.MouseUp += this.LV_SteamPCBackups_MouseUp;
                 }
@@ -814,6 +913,36 @@
                     this.LVI_UplayPCBackups_Slot15 = null;
                 }
 
+                // LVI_UplayPCBackups_Slot16
+                if (!(this.LVI_UplayPCBackups_Slot16 is null)) {
+                    this.LVI_UplayPCBackups_Slot16.Remove();
+                    this.LVI_UplayPCBackups_Slot16 = null;
+                }
+
+                // LVI_UplayPCBackups_Slot17
+                if (!(this.LVI_UplayPCBackups_Slot17 is null)) {
+                    this.LVI_UplayPCBackups_Slot17.Remove();
+                    this.LVI_UplayPCBackups_Slot17 = null;
+                }
+
+                // LVI_UplayPCBackups_Slot18
+                if (!(this.LVI_UplayPCBackups_Slot18 is null)) {
+                    this.LVI_UplayPCBackups_Slot18.Remove();
+                    this.LVI_UplayPCBackups_Slot18 = null;
+                }
+
+                // LVI_UplayPCBackups_Slot19
+                if (!(this.LVI_UplayPCBackups_Slot19 is null)) {
+                    this.LVI_UplayPCBackups_Slot19.Remove();
+                    this.LVI_UplayPCBackups_Slot19 = null;
+                }
+
+                // LVI_UplayPCBackups_Slot20
+                if (!(this.LVI_UplayPCBackups_Slot20 is null)) {
+                    this.LVI_UplayPCBackups_Slot20.Remove();
+                    this.LVI_UplayPCBackups_Slot20 = null;
+                }
+
                 // LV_UplayPCBackups
                 if (!(this.LV_UplayPCBackups is null)) {
                     this.LV_UplayPCBackups.Parent = null;
@@ -926,6 +1055,36 @@
                     this.LVI_SteamPCBackups_Slot15 = null;
                 }
 
+                // LVI_SteamPCBackups_Slot16
+                if (!(this.LVI_SteamPCBackups_Slot16 is null)) {
+                    this.LVI_SteamPCBackups_Slot16.Remove();
+                    this.LVI_SteamPCBackups_Slot16 = null;
+                }
+
+                // LVI_SteamPCBackups_Slot17
+                if (!(this.LVI_SteamPCBackups_Slot17 is null)) {
+                    this.LVI_SteamPCBackups_Slot17.Remove();
+                    this.LVI_SteamPCBackups_Slot17 = null;
+                }
+
+                // LVI_SteamPCBackups_Slot18
+                if (!(this.LVI_SteamPCBackups_Slot18 is null)) {
+                    this.LVI_SteamPCBackups_Slot18.Remove();
+                    this.LVI_SteamPCBackups_Slot18 = null;
+                }
+
+                // LVI_SteamPCBackups_Slot19
+                if (!(this.LVI_SteamPCBackups_Slot19 is null)) {
+                    this.LVI_SteamPCBackups_Slot19.Remove();
+                    this.LVI_SteamPCBackups_Slot19 = null;
+                }
+
+                // LVI_SteamPCBackups_Slot20
+                if (!(this.LVI_SteamPCBackups_Slot20 is null)) {
+                    this.LVI_SteamPCBackups_Slot20.Remove();
+                    this.LVI_SteamPCBackups_Slot20 = null;
+                }
+
                 // LV_SteamPCBackups
                 if (!(this.LV_SteamPCBackups is null)) {
                     this.LV_SteamPCBackups.Parent = null;
@@ -1023,6 +1182,26 @@
                         this.AccountProfile.SteamPC_SaveGame15.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame15.BackupEnabled;
                         this._updateSavegameChart(this.LVI_SteamPCBackups_Slot15, this.AccountProfile.SteamPC_SaveGame15);
                         break;
+                    case 15:
+                        this.AccountProfile.SteamPC_SaveGame16.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame16.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot16, this.AccountProfile.SteamPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.AccountProfile.SteamPC_SaveGame17.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame17.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot17, this.AccountProfile.SteamPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.AccountProfile.SteamPC_SaveGame18.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame18.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot18, this.AccountProfile.SteamPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.AccountProfile.SteamPC_SaveGame19.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame19.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot19, this.AccountProfile.SteamPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.AccountProfile.SteamPC_SaveGame20.BackupEnabled = !this.AccountProfile.SteamPC_SaveGame20.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot20, this.AccountProfile.SteamPC_SaveGame20);
+                        break;
                 }
             }
         }
@@ -1091,6 +1270,26 @@
                     case 14:
                         this.AccountProfile.UplayPC_SaveGame15.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame15.BackupEnabled;
                         this._updateSavegameChart(this.LVI_UplayPCBackups_Slot15, this.AccountProfile.UplayPC_SaveGame15);
+                        break;
+                    case 15:
+                        this.AccountProfile.UplayPC_SaveGame16.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame16.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot16, this.AccountProfile.UplayPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.AccountProfile.UplayPC_SaveGame17.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame17.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot17, this.AccountProfile.UplayPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.AccountProfile.UplayPC_SaveGame18.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame18.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot18, this.AccountProfile.UplayPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.AccountProfile.UplayPC_SaveGame19.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame19.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot19, this.AccountProfile.UplayPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.AccountProfile.UplayPC_SaveGame20.BackupEnabled = !this.AccountProfile.UplayPC_SaveGame20.BackupEnabled;
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot20, this.AccountProfile.UplayPC_SaveGame20);
                         break;
                 }
             }
@@ -1161,6 +1360,26 @@
                         this.AccountProfile.SteamPC_SaveGame15.EnsureBackup();
                         this._updateSavegameChart(this.LVI_SteamPCBackups_Slot15, this.AccountProfile.SteamPC_SaveGame15);
                         break;
+                    case 15:
+                        this.AccountProfile.SteamPC_SaveGame16.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot16, this.AccountProfile.SteamPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.AccountProfile.SteamPC_SaveGame17.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot17, this.AccountProfile.SteamPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.AccountProfile.SteamPC_SaveGame18.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot18, this.AccountProfile.SteamPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.AccountProfile.SteamPC_SaveGame19.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot19, this.AccountProfile.SteamPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.AccountProfile.SteamPC_SaveGame20.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_SteamPCBackups_Slot20, this.AccountProfile.SteamPC_SaveGame20);
+                        break;
                 }
             }
         }
@@ -1229,6 +1448,26 @@
                     case 14:
                         this.AccountProfile.UplayPC_SaveGame15.EnsureBackup();
                         this._updateSavegameChart(this.LVI_UplayPCBackups_Slot15, this.AccountProfile.UplayPC_SaveGame15);
+                        break;
+                    case 15:
+                        this.AccountProfile.UplayPC_SaveGame16.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot16, this.AccountProfile.UplayPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.AccountProfile.UplayPC_SaveGame17.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot17, this.AccountProfile.UplayPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.AccountProfile.UplayPC_SaveGame18.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot18, this.AccountProfile.UplayPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.AccountProfile.UplayPC_SaveGame19.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot19, this.AccountProfile.UplayPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.AccountProfile.UplayPC_SaveGame20.EnsureBackup();
+                        this._updateSavegameChart(this.LVI_UplayPCBackups_Slot20, this.AccountProfile.UplayPC_SaveGame20);
                         break;
                 }
             }
@@ -1339,6 +1578,31 @@
                                 backupExist = this.AccountProfile.UplayPC_SaveGame15.BackupExists;
                                 showEnableBackup = !this.AccountProfile.UplayPC_SaveGame15.BackupEnabled;
                                 break;
+                            case 15:
+                                saveGameExist = this.AccountProfile.UplayPC_SaveGame16.Exists;
+                                backupExist = this.AccountProfile.UplayPC_SaveGame16.BackupExists;
+                                showEnableBackup = !this.AccountProfile.UplayPC_SaveGame16.BackupEnabled;
+                                break;
+                            case 16:
+                                saveGameExist = this.AccountProfile.UplayPC_SaveGame17.Exists;
+                                backupExist = this.AccountProfile.UplayPC_SaveGame17.BackupExists;
+                                showEnableBackup = !this.AccountProfile.UplayPC_SaveGame17.BackupEnabled;
+                                break;
+                            case 17:
+                                saveGameExist = this.AccountProfile.UplayPC_SaveGame18.Exists;
+                                backupExist = this.AccountProfile.UplayPC_SaveGame18.BackupExists;
+                                showEnableBackup = !this.AccountProfile.UplayPC_SaveGame18.BackupEnabled;
+                                break;
+                            case 18:
+                                saveGameExist = this.AccountProfile.UplayPC_SaveGame19.Exists;
+                                backupExist = this.AccountProfile.UplayPC_SaveGame19.BackupExists;
+                                showEnableBackup = !this.AccountProfile.UplayPC_SaveGame19.BackupEnabled;
+                                break;
+                            case 19:
+                                saveGameExist = this.AccountProfile.UplayPC_SaveGame20.Exists;
+                                backupExist = this.AccountProfile.UplayPC_SaveGame20.BackupExists;
+                                showEnableBackup = !this.AccountProfile.UplayPC_SaveGame20.BackupEnabled;
+                                break;
                         }
                     }
 
@@ -1447,6 +1711,31 @@
                                 backupExist = this.AccountProfile.SteamPC_SaveGame15.BackupExists;
                                 showEnableBackup = !this.AccountProfile.SteamPC_SaveGame15.BackupEnabled;
                                 break;
+                            case 15:
+                                saveGameExist = this.AccountProfile.SteamPC_SaveGame16.Exists;
+                                backupExist = this.AccountProfile.SteamPC_SaveGame16.BackupExists;
+                                showEnableBackup = !this.AccountProfile.SteamPC_SaveGame16.BackupEnabled;
+                                break;
+                            case 16:
+                                saveGameExist = this.AccountProfile.SteamPC_SaveGame17.Exists;
+                                backupExist = this.AccountProfile.SteamPC_SaveGame17.BackupExists;
+                                showEnableBackup = !this.AccountProfile.SteamPC_SaveGame17.BackupEnabled;
+                                break;
+                            case 17:
+                                saveGameExist = this.AccountProfile.SteamPC_SaveGame18.Exists;
+                                backupExist = this.AccountProfile.SteamPC_SaveGame18.BackupExists;
+                                showEnableBackup = !this.AccountProfile.SteamPC_SaveGame18.BackupEnabled;
+                                break;
+                            case 18:
+                                saveGameExist = this.AccountProfile.SteamPC_SaveGame19.Exists;
+                                backupExist = this.AccountProfile.SteamPC_SaveGame19.BackupExists;
+                                showEnableBackup = !this.AccountProfile.SteamPC_SaveGame19.BackupEnabled;
+                                break;
+                            case 19:
+                                saveGameExist = this.AccountProfile.SteamPC_SaveGame20.Exists;
+                                backupExist = this.AccountProfile.SteamPC_SaveGame20.BackupExists;
+                                showEnableBackup = !this.AccountProfile.SteamPC_SaveGame20.BackupEnabled;
+                                break;
                         }
                     }
 
@@ -1514,6 +1803,21 @@
                     case 14:
                         this.showBackupForm(this.AccountProfile.UplayPC_SaveGame15);
                         break;
+                    case 15:
+                        this.showBackupForm(this.AccountProfile.UplayPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.showBackupForm(this.AccountProfile.UplayPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.showBackupForm(this.AccountProfile.UplayPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.showBackupForm(this.AccountProfile.UplayPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.showBackupForm(this.AccountProfile.UplayPC_SaveGame20);
+                        break;
                 }
             }
         }
@@ -1567,6 +1871,21 @@
                         break;
                     case 14:
                         this.showBackupForm(this.AccountProfile.SteamPC_SaveGame15);
+                        break;
+                    case 15:
+                        this.showBackupForm(this.AccountProfile.SteamPC_SaveGame16);
+                        break;
+                    case 16:
+                        this.showBackupForm(this.AccountProfile.SteamPC_SaveGame17);
+                        break;
+                    case 17:
+                        this.showBackupForm(this.AccountProfile.SteamPC_SaveGame18);
+                        break;
+                    case 18:
+                        this.showBackupForm(this.AccountProfile.SteamPC_SaveGame19);
+                        break;
+                    case 19:
+                        this.showBackupForm(this.AccountProfile.SteamPC_SaveGame20);
                         break;
                 }
             }
@@ -1631,6 +1950,21 @@
             if (this.AccountProfile.UplayPC_SaveGame15.BackupEnabled) {
                 anyBackupEnabled = true;
             }
+            if (this.AccountProfile.UplayPC_SaveGame16.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.UplayPC_SaveGame17.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.UplayPC_SaveGame18.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.UplayPC_SaveGame19.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.UplayPC_SaveGame20.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
 
             if (this.AccountProfile.SteamPC_SaveGame1.BackupEnabled) {
                 anyBackupEnabled = true;
@@ -1677,6 +2011,21 @@
             if (this.AccountProfile.SteamPC_SaveGame15.BackupEnabled) {
                 anyBackupEnabled = true;
             }
+            if (this.AccountProfile.SteamPC_SaveGame16.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.SteamPC_SaveGame17.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.SteamPC_SaveGame18.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.SteamPC_SaveGame19.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
+            if (this.AccountProfile.SteamPC_SaveGame20.BackupEnabled) {
+                anyBackupEnabled = true;
+            }
 
             if (anyBackupEnabled) {
                 // Disable Backup All
@@ -1696,6 +2045,11 @@
                 this.AccountProfile.UplayPC_SaveGame13.BackupEnabled = false;
                 this.AccountProfile.UplayPC_SaveGame14.BackupEnabled = false;
                 this.AccountProfile.UplayPC_SaveGame15.BackupEnabled = false;
+                this.AccountProfile.UplayPC_SaveGame16.BackupEnabled = false;
+                this.AccountProfile.UplayPC_SaveGame17.BackupEnabled = false;
+                this.AccountProfile.UplayPC_SaveGame18.BackupEnabled = false;
+                this.AccountProfile.UplayPC_SaveGame19.BackupEnabled = false;
+                this.AccountProfile.UplayPC_SaveGame20.BackupEnabled = false;
 
                 this.AccountProfile.SteamPC_SaveGame1.BackupEnabled = false;
                 this.AccountProfile.SteamPC_SaveGame2.BackupEnabled = false;
@@ -1712,6 +2066,11 @@
                 this.AccountProfile.SteamPC_SaveGame13.BackupEnabled = false;
                 this.AccountProfile.SteamPC_SaveGame14.BackupEnabled = false;
                 this.AccountProfile.SteamPC_SaveGame15.BackupEnabled = false;
+                this.AccountProfile.SteamPC_SaveGame16.BackupEnabled = false;
+                this.AccountProfile.SteamPC_SaveGame17.BackupEnabled = false;
+                this.AccountProfile.SteamPC_SaveGame18.BackupEnabled = false;
+                this.AccountProfile.SteamPC_SaveGame19.BackupEnabled = false;
+                this.AccountProfile.SteamPC_SaveGame20.BackupEnabled = false;
 
                 this.LB_BackupAll.Text = "Enable: Auto-Backup All";
             } else {
@@ -1732,6 +2091,11 @@
                 this.AccountProfile.UplayPC_SaveGame13.BackupEnabled = true;
                 this.AccountProfile.UplayPC_SaveGame14.BackupEnabled = true;
                 this.AccountProfile.UplayPC_SaveGame15.BackupEnabled = true;
+                this.AccountProfile.UplayPC_SaveGame16.BackupEnabled = true;
+                this.AccountProfile.UplayPC_SaveGame17.BackupEnabled = true;
+                this.AccountProfile.UplayPC_SaveGame18.BackupEnabled = true;
+                this.AccountProfile.UplayPC_SaveGame19.BackupEnabled = true;
+                this.AccountProfile.UplayPC_SaveGame20.BackupEnabled = true;
 
                 this.AccountProfile.SteamPC_SaveGame1.BackupEnabled = true;
                 this.AccountProfile.SteamPC_SaveGame2.BackupEnabled = true;
@@ -1748,6 +2112,11 @@
                 this.AccountProfile.SteamPC_SaveGame13.BackupEnabled = true;
                 this.AccountProfile.SteamPC_SaveGame14.BackupEnabled = true;
                 this.AccountProfile.SteamPC_SaveGame15.BackupEnabled = true;
+                this.AccountProfile.SteamPC_SaveGame16.BackupEnabled = true;
+                this.AccountProfile.SteamPC_SaveGame17.BackupEnabled = true;
+                this.AccountProfile.SteamPC_SaveGame18.BackupEnabled = true;
+                this.AccountProfile.SteamPC_SaveGame19.BackupEnabled = true;
+                this.AccountProfile.SteamPC_SaveGame20.BackupEnabled = true;
 
                 this.LB_BackupAll.Text = "Disable: Auto-Backup All";
             }
@@ -1809,6 +2178,11 @@
             this._updateSavegameChart(this.LVI_UplayPCBackups_Slot13, this.AccountProfile.UplayPC_SaveGame13);
             this._updateSavegameChart(this.LVI_UplayPCBackups_Slot14, this.AccountProfile.UplayPC_SaveGame14);
             this._updateSavegameChart(this.LVI_UplayPCBackups_Slot15, this.AccountProfile.UplayPC_SaveGame15);
+            this._updateSavegameChart(this.LVI_UplayPCBackups_Slot16, this.AccountProfile.UplayPC_SaveGame16);
+            this._updateSavegameChart(this.LVI_UplayPCBackups_Slot17, this.AccountProfile.UplayPC_SaveGame17);
+            this._updateSavegameChart(this.LVI_UplayPCBackups_Slot18, this.AccountProfile.UplayPC_SaveGame18);
+            this._updateSavegameChart(this.LVI_UplayPCBackups_Slot19, this.AccountProfile.UplayPC_SaveGame19);
+            this._updateSavegameChart(this.LVI_UplayPCBackups_Slot20, this.AccountProfile.UplayPC_SaveGame20);
 
             this._updateSavegameChart(this.LVI_SteamPCBackups_Slot1, this.AccountProfile.SteamPC_SaveGame1);
             this._updateSavegameChart(this.LVI_SteamPCBackups_Slot2, this.AccountProfile.SteamPC_SaveGame2);
@@ -1825,6 +2199,11 @@
             this._updateSavegameChart(this.LVI_SteamPCBackups_Slot13, this.AccountProfile.SteamPC_SaveGame13);
             this._updateSavegameChart(this.LVI_SteamPCBackups_Slot14, this.AccountProfile.SteamPC_SaveGame14);
             this._updateSavegameChart(this.LVI_SteamPCBackups_Slot15, this.AccountProfile.SteamPC_SaveGame15);
+            this._updateSavegameChart(this.LVI_SteamPCBackups_Slot16, this.AccountProfile.SteamPC_SaveGame16);
+            this._updateSavegameChart(this.LVI_SteamPCBackups_Slot17, this.AccountProfile.SteamPC_SaveGame17);
+            this._updateSavegameChart(this.LVI_SteamPCBackups_Slot18, this.AccountProfile.SteamPC_SaveGame18);
+            this._updateSavegameChart(this.LVI_SteamPCBackups_Slot19, this.AccountProfile.SteamPC_SaveGame19);
+            this._updateSavegameChart(this.LVI_SteamPCBackups_Slot20, this.AccountProfile.SteamPC_SaveGame20);
         }
 
 

@@ -32,6 +32,11 @@
             this.UplayPC_SaveGame13 = new SaveGame(this, AccountProfile.UplayPCGameID, 13);
             this.UplayPC_SaveGame14 = new SaveGame(this, AccountProfile.UplayPCGameID, 14);
             this.UplayPC_SaveGame15 = new SaveGame(this, AccountProfile.UplayPCGameID, 15);
+            this.UplayPC_SaveGame16 = new SaveGame(this, AccountProfile.UplayPCGameID, 16);
+            this.UplayPC_SaveGame17 = new SaveGame(this, AccountProfile.UplayPCGameID, 17);
+            this.UplayPC_SaveGame18 = new SaveGame(this, AccountProfile.UplayPCGameID, 18);
+            this.UplayPC_SaveGame19 = new SaveGame(this, AccountProfile.UplayPCGameID, 19);
+            this.UplayPC_SaveGame20 = new SaveGame(this, AccountProfile.UplayPCGameID, 20);
 
             this.SteamPC_SaveGame1 = new SaveGame(this, AccountProfile.SteamPCGameID, 1);
             this.SteamPC_SaveGame2 = new SaveGame(this, AccountProfile.SteamPCGameID, 2);
@@ -48,6 +53,11 @@
             this.SteamPC_SaveGame13 = new SaveGame(this, AccountProfile.SteamPCGameID, 13);
             this.SteamPC_SaveGame14 = new SaveGame(this, AccountProfile.SteamPCGameID, 14);
             this.SteamPC_SaveGame15 = new SaveGame(this, AccountProfile.SteamPCGameID, 15);
+            this.SteamPC_SaveGame16 = new SaveGame(this, AccountProfile.SteamPCGameID, 16);
+            this.SteamPC_SaveGame17 = new SaveGame(this, AccountProfile.SteamPCGameID, 17);
+            this.SteamPC_SaveGame18 = new SaveGame(this, AccountProfile.SteamPCGameID, 18);
+            this.SteamPC_SaveGame19 = new SaveGame(this, AccountProfile.SteamPCGameID, 19);
+            this.SteamPC_SaveGame20 = new SaveGame(this, AccountProfile.SteamPCGameID, 20);
         }
 
 
@@ -114,6 +124,21 @@
                 if (this.UplayPC_SaveGame15.Exists) {
                     return true;
                 }
+                if (this.UplayPC_SaveGame16.Exists) {
+                    return true;
+                }
+                if (this.UplayPC_SaveGame17.Exists) {
+                    return true;
+                }
+                if (this.UplayPC_SaveGame18.Exists) {
+                    return true;
+                }
+                if (this.UplayPC_SaveGame19.Exists) {
+                    return true;
+                }
+                if (this.UplayPC_SaveGame20.Exists) {
+                    return true;
+                }
 
                 return false;
             }
@@ -167,6 +192,21 @@
                     return true;
                 }
                 if (this.SteamPC_SaveGame15.Exists) {
+                    return true;
+                }
+                if (this.SteamPC_SaveGame16.Exists) {
+                    return true;
+                }
+                if (this.SteamPC_SaveGame17.Exists) {
+                    return true;
+                }
+                if (this.SteamPC_SaveGame18.Exists) {
+                    return true;
+                }
+                if (this.SteamPC_SaveGame19.Exists) {
+                    return true;
+                }
+                if (this.SteamPC_SaveGame20.Exists) {
                     return true;
                 }
 
@@ -280,6 +320,41 @@
         }
 
 
+        public SaveGame UplayPC_SaveGame16
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame UplayPC_SaveGame17
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame UplayPC_SaveGame18
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame UplayPC_SaveGame19
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame UplayPC_SaveGame20
+        {
+            get;
+            private set;
+        }
+
+
         public SaveGame SteamPC_SaveGame1
         {
             get;
@@ -385,6 +460,41 @@
         }
 
 
+        public SaveGame SteamPC_SaveGame16
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame SteamPC_SaveGame17
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame SteamPC_SaveGame18
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame SteamPC_SaveGame19
+        {
+            get;
+            private set;
+        }
+
+
+        public SaveGame SteamPC_SaveGame20
+        {
+            get;
+            private set;
+        }
+
+
         public void ClearCache()
         {
             this.UplayPC_SaveGame1.ClearCache();
@@ -402,6 +512,11 @@
             this.UplayPC_SaveGame13.ClearCache();
             this.UplayPC_SaveGame14.ClearCache();
             this.UplayPC_SaveGame15.ClearCache();
+            this.UplayPC_SaveGame16.ClearCache();
+            this.UplayPC_SaveGame17.ClearCache();
+            this.UplayPC_SaveGame18.ClearCache();
+            this.UplayPC_SaveGame19.ClearCache();
+            this.UplayPC_SaveGame20.ClearCache();
 
             this.SteamPC_SaveGame1.ClearCache();
             this.SteamPC_SaveGame2.ClearCache();
@@ -418,6 +533,11 @@
             this.SteamPC_SaveGame13.ClearCache();
             this.SteamPC_SaveGame14.ClearCache();
             this.SteamPC_SaveGame15.ClearCache();
+            this.SteamPC_SaveGame16.ClearCache();
+            this.SteamPC_SaveGame17.ClearCache();
+            this.SteamPC_SaveGame18.ClearCache();
+            this.SteamPC_SaveGame19.ClearCache();
+            this.SteamPC_SaveGame20.ClearCache();
         }
 
 
